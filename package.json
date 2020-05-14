@@ -6,9 +6,21 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "gray-matter": "^4.0.2",
+    "local-storage-fallback": "^4.1.1",
+    "rc-slider": "^9.2.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-github-btn": "^1.2.0",
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.10.0",
+    "react-markdown": "^4.3.1",
+    "react-overflow-indicator": "^0.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-tooltip": "^4.2.6",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
