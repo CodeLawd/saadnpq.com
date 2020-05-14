@@ -9,7 +9,7 @@ const colors = {
   followerBorder: ['#FFFFFF', 'yellow'],
   cursorColor: ['rgba(0,0,0,0)', 'rgba(0,0,0,0)'],
   primaryColor: ['#B6A865', '#6E1DAD'],
-  noiseOpacity: ['.5', '.9'],
+  noiseOpacity: ['.9', '.9'],
   borderRadius: ['3px', '5px'],
   borderWidth: ['1px', '1px'],
   borderColor: ['#B6A865', '#000000'],
