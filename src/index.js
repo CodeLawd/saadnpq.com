@@ -30,9 +30,10 @@ const GlobalStyle = createGlobalStyle`
     html { font-size: 12px; }
   }
 
-  a:visited {
-    color: inherit;
-  }
+  a {color: inherit;}         /* Unvisited link  */
+  a:visited {color: inherit;} /* Visited link    */
+  a:hover {color: inherit;}   /* Mouse over link */
+  a:active {color: inherit;}  /* Selected link   */
 
   button {
     outline: none;
