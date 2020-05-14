@@ -8,7 +8,6 @@ import Contact from './home-sections/Contact'
 function Home() {
   return (
     <div>
-      <Head title="Home"/>
       <Landing />
       <WhoAmI />
       <Projects />
