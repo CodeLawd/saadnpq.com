@@ -14,7 +14,8 @@ const SoundOnButton = styled.button`
 `
 
 const PauseButton = styled.button`
-  font-size: 1.5rem;
+  font-size: 30px;
+  margin-right: 10px;
   background: none;
   border: none;
   font-family: 'Quicksand', sans-serif;
@@ -30,6 +31,13 @@ const Container = styled.div`
   align-items: center;
 `
 
+const Width = styled.div`
+  width: 150px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`
 
 const MusicController = (props) => {
   const {isPlaying, setIsPlaying, musicPlayer, volume, setVolume} = useContext(settingsContext)
@@ -52,27 +60,21 @@ const MusicController = (props) => {
     setVolume(value)
   }
 
-  const Width = styled.div`
-    width: 150px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  `
 
   if (isPlaying){
     return(
       <Width>
         <Container>
           <PauseButton onClick={togglePlaySound}> <BsPauseFill /></PauseButton>
-            <Slider 
-              style={{width: "100px"}}
-              trackStyle={[{backgroundColor: props.color1}]}
-              handleStyle={[{borderColor: props.color1, backgroundColor: props.color2 }]}
-              railStyle={{backgroundColor: props.color2}}
-              min={0} max={1} step={0.1}
-              value={volume}
-              onChange={handleRangeChange}/>
+          <Slider 
+            style={{width: "100px"}}
+            trackStyle={[{backgroundColor: props.color1}]}
+            handleStyle={[{borderColor: props.color1, backgroundColor: props.color2, height: "25px", width: "25px", top:"0", transformY:"translate(-50%)" }]}
+            railStyle={{backgroundColor: props.color2}}
+            min={0} max={1} step={0.1}
+            value={volume}
+            onChange={handleRangeChange}
+            />
         </Container>
       </Width>
     )
