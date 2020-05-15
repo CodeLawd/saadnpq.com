@@ -14,8 +14,8 @@ const SoundOnButton = styled.button`
 `
 
 const PauseButton = styled.button`
-  font-size: 30px;
-  margin-right: 10px;
+  font-size: 25px;
+  margin-right: 5px;
   background: none;
   border: none;
   font-family: 'Quicksand', sans-serif;
@@ -69,7 +69,7 @@ const MusicController = (props) => {
           <Slider 
             style={{width: "100px"}}
             trackStyle={[{backgroundColor: props.color1}]}
-            handleStyle={[{borderColor: props.color1, backgroundColor: props.color2, height: "25px", width: "25px", top:"0", transformY:"translate(-50%)" }]}
+            handleStyle={[{borderColor: props.color1, backgroundColor: props.color2, height: "20px", width: "20px", top:"2px"}]}
             railStyle={{backgroundColor: props.color2}}
             min={0} max={1} step={0.1}
             value={volume}
