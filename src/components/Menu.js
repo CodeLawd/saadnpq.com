@@ -47,12 +47,13 @@ const MenuButton = styled.button`
 
 const MenuContent = styled.div`
   display: ${props => props.display};
-  height: 300px;
+  height: 400px;
   padding: 20px;
   grid-template-areas:
     'nav settings'
     'nav social'
     'contacts contacts';
+  grid-template-rows: 1fr 1fr auto;
 `
 const StyledNav = styled.div`
   grid-area: nav;

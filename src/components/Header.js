@@ -18,7 +18,7 @@ const Container = styled.div`
     'logo navigation social';
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr 0.5fr auto;
-  grid-row-gap: 30px;
+  grid-row-gap: 70px;
 
 `
 
