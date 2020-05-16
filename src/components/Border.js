@@ -12,7 +12,7 @@ const StyledBorder = styled.div`
   -webkit-box-sizing: border-box;
   border: ${props => props.theme.globalBorderWidth} solid ${props => props.theme.primaryColor};
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `
 
 function Border() {
