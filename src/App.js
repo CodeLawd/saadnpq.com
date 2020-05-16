@@ -14,19 +14,12 @@ function App() {
   const [darkMode, setDarkMode] = useState(initialDarkP())
   const [isPlaying, setIsPlaying] = useState(false)
   const [volume, setVolume] = useState(0.3)
-  const [innerHeight, setInnerHeight] = useState(window.innerHeight)
 
   const musicPlayer = useRef()
 
   useEffect(() => {
     storage.setItem('darkMode', JSON.stringify(darkMode))
   }, [darkMode])
-
-  const updateInnerHeight = () => {setInnerHeight(window.innerHeight)}
-  useEffect(() => {
-    window.addEventListener('resize', updateInnerHeight)
-    return () => { window.removeEventListener('resize', updateInnerHeight) }
-  }, [])
 
   function initialDarkP() {
     const returner = storage.getItem('darkMode')
@@ -43,7 +36,6 @@ function App() {
     musicPlayer, 
     volume,
     setVolume,
-    innerHeight,
     }
 
   return (

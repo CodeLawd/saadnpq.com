@@ -79,8 +79,8 @@ const StyledSocial = styled.div`
 function Menu() {
   const [position, setPosition] = useState('absolute')
   const [showMenu, setShowMenu] = useState(false)
-  const {darkMode, innerHeight} = useContext(settingsContext)
-  const [top, setTop] = useState(`${innerHeight}px`)
+  const {darkMode} = useContext(settingsContext)
+  const [top, setTop] = useState(`${window.innerHeight}px`)
 
   const handleScroll = (e) => {
     const borderWidthpx = dark.globalBorderWidth()
@@ -127,7 +127,7 @@ function Menu() {
       <MenuButton onClick={() => setShowMenu(last => !last)}>
         {showMenu ? <RiCloseLine /> : <RiMenu3Line /> }
       </MenuButton>
-      <MenuContent display={!showMenu ? "none" : "grid" } innerHeight={innerHeight}>
+      <MenuContent display={!showMenu ? "none" : "grid" } innerHeight={window.innerHeight}>
         <StyledNav>
           <Nav />
         </StyledNav>
