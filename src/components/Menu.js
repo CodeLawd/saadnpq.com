@@ -5,6 +5,7 @@ import {RiMenu3Line, RiCloseLine} from 'react-icons/ri'
 import Nav from './Nav'
 import Settings from './Settings'
 import Contacts  from './Contacts'
+import Social from './Social'
 
 import {settingsContext} from '../contexts/SettingsContext'
 import {dark, light} from '../data/colors'
@@ -48,18 +49,26 @@ const MenuContent = styled.div`
   display: ${props => props.display};
   height: 300px;
   padding: 20px;
-  flex-direction: column;
-  justify-content: space-between;
+  grid-template-areas:
+    'nav settings'
+    'nav social'
+    'contacts contacts';
+`
+const StyledNav = styled.div`
+  grid-area: nav;
 `
 
-const NavAndSettings = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+const StyledSettings = styled.div`
+  grid-area: settings;
 `
 
 const StyledContacts = styled.div`
-  align-self: flex-end;
+  grid-area: contacts;
+  justify-self: end;
+`
+
+const StyledSocial = styled.div`
+  grid-area: social;
 `
 
 function Menu() {
@@ -94,14 +103,19 @@ function Menu() {
       <MenuButton onClick={() => setShowMenu(last => !last)}>
         {showMenu ? <RiCloseLine /> : <RiMenu3Line /> }
       </MenuButton>
-      <MenuContent display={!showMenu ? "none" : "flex" }>
-        <NavAndSettings>
+      <MenuContent display={!showMenu ? "none" : "grid" }>
+        <StyledNav>
           <Nav />
+        </StyledNav>
+        <StyledSettings>
           <Settings color1={darkMode ? dark.inverseColor() : light.inverseColor() } color2={darkMode ? dark.railColorMenu() : light.railColorMenu()}/>
-        </NavAndSettings>
+        </StyledSettings>
         <StyledContacts>
           <Contacts inverse={true} />
         </StyledContacts>
+        <StyledSocial>
+          <Social />
+        </StyledSocial>
       </MenuContent>
     </MenuContainer>
   )
