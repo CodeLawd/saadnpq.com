@@ -16,7 +16,7 @@ const projects = [
   },
   { 
     name: "npq hugo",
-    description: "hugo theme for personal websites",
+    description: "hugo theme for personal blogs",
     repo: "saadnpq/npq-hugo",
     demo: "https://themes.gohugo.io/theme/npq-hugo/",
     techonlogies : [ 
@@ -48,7 +48,7 @@ const projects = [
     showCount: false,
   },
   { 
-    name: "this site",
+    name: "this.site",
   description: "this react app",
     repo: "saadnpq/saadnpq.com",
     techonlogies : [ 
