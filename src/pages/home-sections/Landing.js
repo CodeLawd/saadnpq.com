@@ -1,12 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {AiOutlineArrowDown} from 'react-icons/ai'
 
 import Header from '../../components/Header'
 import Contacts from '../../components/Contacts'
 import Intro from '../../components/Intro'
-
-import {settingsContext} from '../../contexts/SettingsContext'
 
 const Content = styled.div`
   width: 85%;
@@ -44,11 +42,10 @@ const ScrollIndicator = styled.div`
 `
 
 function Landing() {
-  const { innerHeight } = useContext(settingsContext)
 
   return (
     <Content id='top'>
-      <Container innerHeight={innerHeight}>
+      <Container innerHeight={window.innerHeight}>
         <StyledHeader>
           <Header/>
         </StyledHeader>
