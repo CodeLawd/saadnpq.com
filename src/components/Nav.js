@@ -33,9 +33,6 @@ function Nav(props) {
       <Item onClick={() => scrollTo('contact')}>
           contact
       </Item>
-      <Item>
-        <a href='https://github.com/saadnpq' target='_blank'  rel="noopener noreferrer" > github</a>
-      </Item>
     </Container>
   )
 }

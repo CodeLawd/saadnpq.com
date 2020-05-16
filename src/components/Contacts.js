@@ -11,7 +11,7 @@ const Container = styled.div`
 `
 
 const Item = styled.div`
-  margin-left: 30px;
+  margin-left: 20px;
 `
 
 function Contacts(props) {

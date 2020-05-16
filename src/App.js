@@ -46,7 +46,7 @@ function App() {
         <Body>
           <ReactTooltip />
           <Menu />
-          <Home/>
+          <Home />
         </Body>
       </SettingsContext>
     </ThemeProvider>
