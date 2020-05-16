@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import styled from 'styled-components'
 
 import Noise from './Noise'
 import Border from './Border'
+
+import {settingsContext} from '../contexts/SettingsContext'
 
 const cursorRadius = 5 
 const clickableCursorRadius = 20
@@ -13,7 +15,7 @@ const StyledBody = styled.div`
   color: ${props => props.theme.color};
   background-color: ${props => props.theme.backgroundColor};
   font-family: 'Open Sans',sans-serif;
-  min-height: 100vh;
+  min-height: ${props => props.innerHeight}px;
   padding-bottom: 5px;
 `
 
@@ -33,6 +35,8 @@ const StyledMouseCursor = styled.div`
 `
 
 function Body(props){
+
+  const { innerHeight } = useContext(settingsContext)
 
   const cursorRef = useRef()
 
@@ -118,6 +122,7 @@ function Body(props){
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
       onWheel={handleScroll}
+      innerHeight={innerHeight}
       >
       <StyledMouseCursor ref={cursorRef} className="cursor" />
       <Noise />

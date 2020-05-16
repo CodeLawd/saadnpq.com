@@ -54,6 +54,10 @@ const MenuContent = styled.div`
     'nav social'
     'contacts contacts';
   grid-template-rows: 1fr 1fr auto;
+
+  @media (max-height: 455px) {
+    height: calc(${props => props.innerHeight}px - 55px);
+  }
 `
 const StyledNav = styled.div`
   grid-area: nav;
@@ -74,10 +78,9 @@ const StyledSocial = styled.div`
 
 function Menu() {
   const [position, setPosition] = useState('absolute')
-  const [top, setTop] = useState('100vh')
   const [showMenu, setShowMenu] = useState(false)
-
-  const {darkMode} = useContext(settingsContext)
+  const {darkMode, innerHeight} = useContext(settingsContext)
+  const [top, setTop] = useState(`${innerHeight}px`)
 
   const handleScroll = (e) => {
     const borderWidthpx = dark.globalBorderWidth()
@@ -90,13 +93,33 @@ function Menu() {
       setTop(`${dark.globalBorderWidth()}`)
     } else {
       setPosition('absolute')
-      setTop('100vh')
+      setTop(`${viewPort}px`)
+    }
+  }
+
+  const handleResize = (e) => {
+    const borderWidthpx = dark.globalBorderWidth()
+    const borderWidth = Number.parseInt(borderWidthpx.slice(0, borderWidthpx.indexOf('px')))
+    const scrollPosition = e.target.scrollY + borderWidth 
+    const viewPort = window.innerHeight 
+
+    if (scrollPosition >= viewPort) {
+      setPosition('fixed')
+      setTop(`${dark.globalBorderWidth()}`)
+    } else {
+      setPosition('absolute')
+      setTop(`${viewPort}px`)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return (
@@ -104,7 +127,7 @@ function Menu() {
       <MenuButton onClick={() => setShowMenu(last => !last)}>
         {showMenu ? <RiCloseLine /> : <RiMenu3Line /> }
       </MenuButton>
-      <MenuContent display={!showMenu ? "none" : "grid" }>
+      <MenuContent display={!showMenu ? "none" : "grid" } innerHeight={innerHeight}>
         <StyledNav>
           <Nav />
         </StyledNav>

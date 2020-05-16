@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import {AiOutlineArrowDown} from 'react-icons/ai'
 
@@ -6,13 +6,15 @@ import Header from '../../components/Header'
 import Contacts from '../../components/Contacts'
 import Intro from '../../components/Intro'
 
+import {settingsContext} from '../../contexts/SettingsContext'
+
 const Content = styled.div`
   width: 85%;
   margin:auto;
 `
 
 const Container = styled.div`
-  height: 100vh;
+  height: ${props => props.innerHeight}px;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,11 +44,11 @@ const ScrollIndicator = styled.div`
 `
 
 function Landing() {
-
+  const { innerHeight } = useContext(settingsContext)
 
   return (
     <Content id='top'>
-      <Container>
+      <Container innerHeight={innerHeight}>
         <StyledHeader>
           <Header/>
         </StyledHeader>

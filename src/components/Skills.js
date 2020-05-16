@@ -92,16 +92,16 @@ function Skills() {
         technical skills
       </Title>
       <Categories>
-        {skills.map((skillObject) => {
+        {skills.map((skillObject, index) => {
           if (skillObject === activeSkillObject) {
             return (
-              <ActiveCategory onClick={() => {setActiveSkillObject(skillObject)}}>
+              <ActiveCategory key={index} onClick={() => {setActiveSkillObject(skillObject)}}>
                 {skillObject.category}
               </ActiveCategory>
             )
           } else {
             return (
-              <Category onClick={() => {setActiveSkillObject(skillObject)}}>
+              <Category key={index} onClick={() => {setActiveSkillObject(skillObject)}}>
                 {skillObject.category}
               </Category>
             )
@@ -109,9 +109,9 @@ function Skills() {
         })}
       </Categories>
       <Elements>
-        {activeSkillObject.elements.map((element) => {
+        {activeSkillObject.elements.map((element, index) => {
           return (
-            <Element>
+            <Element key={index}>
               <ElementName>
                 {element.name} 
               </ElementName>

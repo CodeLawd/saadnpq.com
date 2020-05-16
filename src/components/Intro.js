@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
+import {settingsContext} from '../contexts/SettingsContext'
 
 const StyledMain = styled.div`
   position: absolute;
-  top: 50vh;
+  top: ${props => props.top}px;
   transform: translateY(-50%);
   margin-right: 30px;
 `
@@ -61,13 +62,15 @@ const LinkContainer = styled.div`
 
 function Intro() {
 
+  const { innerHeight } = useContext(settingsContext)
+
   function  scrollTo(id) {
     var el = document.getElementById(id);
     el.scrollIntoView(true);
   }
 
   return (
-    <StyledMain>
+    <StyledMain top={innerHeight*0.5}>
       <SecondaryText>
         hello, i am a cairo based
       </SecondaryText>

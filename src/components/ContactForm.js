@@ -105,15 +105,15 @@ function ContactForm () {
   return (
     <Form onSubmit={handleOnSubmit}>
       <InputContainer>
-        <Label for='name'> name: </Label>
+        <Label htmlFor='name'> name: </Label>
         <Input type="text" id='name' name="name" />
       </InputContainer>
       <InputContainer>
-        <Label for='mail'> mail: </Label>
+        <Label htmlFor='mail'> mail: </Label>
         <Input type="email" id='mail' name="mail" />
       </InputContainer>
       <InputContainer>
-        <Label for='message'> message: </Label>
+        <Label htmlFor='message'> message: </Label>
         <MessageArea type="text" id='message' name="message" />
       </InputContainer>
       <Submit type="submit" disabled={serverState.submitting}  >send</Submit>

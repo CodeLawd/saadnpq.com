@@ -31,24 +31,26 @@ function Copy(props) {
   const tipBackgroundColor = darkMode ? dark.primaryColor() : light.primaryColor() 
   const tipTextColor = darkMode ? dark.inverseColor() : light.inverseColor()
   return (
-    <Container
-      data-tip="click to copy" 
-      data-event="mouseenter" 
-      data-event-off="click mouseleave"
-      data-background-color={props.inverse ? tipTextColor : tipBackgroundColor}
-      data-text-color={props.inverse ? tipBackgroundColor: tipTextColor} 
-      >
-      <Container 
-        data-tip={`copied ${props.copy}`} 
-        data-event="click"
+    <Container>
+      <div
+        data-tip="click to copy" 
+        data-event="mouseenter" 
+        data-event-off="click mouseleave"
         data-background-color={props.inverse ? tipTextColor : tipBackgroundColor}
         data-text-color={props.inverse ? tipBackgroundColor: tipTextColor} 
         >
-        <TextAndIcon>
-          {props.children} <Icon> <AiOutlineCopy /> </Icon>
-        </TextAndIcon>
-      </Container> 
-    </Container> 
+        <div 
+          data-tip={`copied ${props.copy}`} 
+          data-event="click"
+          data-background-color={props.inverse ? tipTextColor : tipBackgroundColor}
+          data-text-color={props.inverse ? tipBackgroundColor: tipTextColor} 
+          >
+          <TextAndIcon>
+            {props.children} <Icon> <AiOutlineCopy /> </Icon>
+          </TextAndIcon>
+        </div> 
+      </div> 
+    </Container>
   )
 }
 

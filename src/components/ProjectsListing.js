@@ -222,7 +222,7 @@ function ProjectsListing() {
         }
 
         return(
-          <Card>
+          <Card key={index}>
             <ProjectHeader>
               <HeaderContainer>
                 <ProjectTitle>
@@ -238,7 +238,7 @@ function ProjectsListing() {
                     {project.techonlogies.map((technology, index) => {
                       const length = project.techonlogies.length
                       return (
-                        <Technology>
+                        <Technology key={index}>
                           <TechnologyIcon>{technology.preJSX}</TechnologyIcon> {technology.name}{ (length > 1 && index !== length -1) ? ',' : ''}
                         </Technology>
                       )
