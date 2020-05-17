@@ -15,7 +15,7 @@ const MainText = styled.div`
   font-family: 'Quicksand', sans-serif;
   font-size: 3rem;
   line-height: 3rem;
-  margin: 7px 0px;
+  margin: 10px 0px;
 `
 
 const CTA = styled.div`
