@@ -8,7 +8,6 @@ const showMax = 6;
 const IHaveLotsOfProjects = false
 
 const MainContainer = styled.div`
-  margin-bottom: 50px;
 `
 
 const Cards = styled.div`
@@ -26,7 +25,7 @@ const Cards = styled.div`
 
 const Card = styled.div`
   background-color: ${props => props.theme.projectsBackgroundColor};
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,6 +39,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   flex: 1;
 `
+
 const FooterContainer = styled.div`
   width: 90%;
   margin: auto;

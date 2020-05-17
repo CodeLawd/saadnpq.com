@@ -17,7 +17,6 @@ const MessageArea = styled.textarea`
   font-size: 1rem;
   height: 10rem;
   padding: 0.5rem;
-  }
 `
 
 const InputContainer = styled.div`
@@ -45,7 +44,7 @@ const Label = styled.label`
 const Form = styled.form`
   width: 500px;
   background-color: ${props => props.theme.backgroundColor};
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: 8px;
   padding: 20px; 
   display: flex;
   flex-direction: column;

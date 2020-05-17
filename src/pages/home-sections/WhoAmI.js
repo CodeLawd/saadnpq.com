@@ -16,8 +16,8 @@ const Title = styled.div`
   font-size: 2.75rem;
   font-family: 'Quicksand';
   color: ${props => props.theme.primaryColor};
-  padding-top: 30px;
-  margin-bottom: 5px;
+  padding-top: 50px;
+  margin-bottom: 10px;
 `
 
 const About = styled.div`

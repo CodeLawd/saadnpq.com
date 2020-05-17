@@ -12,11 +12,12 @@ const Title = styled.div`
   font-size: 2.75rem;
   font-family: 'Quicksand';
   color: ${props => props.theme.primaryColor};
-  padding-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 50px;
+  margin-bottom: 50px;
 `
 
 const ProjectListingContainer = styled.div`
+  margin-bottom: 50px;
 `
 
 
