@@ -80,7 +80,7 @@ function WhoAmI() {
         <Title>who am i</Title>
         <Content>
           <About>
-            i am a developer with multible backgrounds and multipotentiality in computer science. my horizontal knowledge base helps me alot with many things, some of which are: idea synthesis (crafting a solution from the intersection of many fields), deep understanding of the big picture, and rapid learning.
+            i am a developer with multible backgrounds and multipotentiality in computer science. my horizontal knowledge base helps me a lot with many things, some of which are: idea synthesis (crafting a solution from the intersection of many fields), deep understanding of the big picture, and rapid learning.
           </About>
           <StyledSkills>
             <Skills />

@@ -1,20 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import ReactRotatingText from 'react-rotating-text'
 
 const StyledMain = styled.div`
-  position: absolute;
-  top: ${props => props.top}px;
-  transform: translateY(-50%);
   margin-right: 30px;
 `
 
 const SecondaryText = styled.div`
   width: 80%;
+  color: ${props => props.theme.color};
 `
 
 const MainText = styled.div`
   font-family: 'Quicksand', sans-serif;
-  color: ${props => props.theme.primaryColor};
   font-size: 3rem;
   line-height: 3rem;
   margin: 7px 0px;
@@ -72,7 +70,7 @@ function Intro() {
         hello, i am a cairo based
       </SecondaryText>
       <MainText>
-        full stack developer
+        <ReactRotatingText items={['full stack developer', 'ui/ux designer']} emptyPause={200}/>
       </MainText>
       <SecondaryText>
         saad is my name, npq is my unique identifier, and this is my website/portfolio
