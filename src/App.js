@@ -24,7 +24,7 @@ function App() {
   }, [darkMode])
 
   const updateInnerHeight = () => {
-    if (Math.abs(lastHeight.current - window.innerHeight) > 100)
+    if (Math.abs(lastHeight.current - window.innerHeight) > 200)
       setInnerHeight(window.innerHeight)
       lastHeight.current = window.innerHeight
   }
