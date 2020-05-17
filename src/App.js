@@ -17,12 +17,17 @@ function App() {
   const [innerHeight, setInnerHeight] = useState(window.innerHeight)
 
   const musicPlayer = useRef()
+  const lastHeight = useRef()
 
   useEffect(() => {
     storage.setItem('darkMode', JSON.stringify(darkMode))
   }, [darkMode])
 
-  const updateInnerHeight = () => {setInnerHeight(window.innerHeight)}
+  const updateInnerHeight = () => {
+    if (Math.abs(lastHeight.current - window.innerHeight) > 100)
+      setInnerHeight(window.innerHeight)
+      lastHeight.current = window.innerHeight
+  }
   useEffect(() => {
     window.addEventListener('resize', updateInnerHeight)
     return () => { window.removeEventListener('resize', updateInnerHeight) }
