@@ -33,11 +33,8 @@ const TitleLine = styled.div`
 const CardsGrid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;  
-  @media (max-width: 927px) {
-    grid-template-columns: 1fr 1fr;
-  }
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;  
   @media (max-width: 624px) {
     grid-template-columns: 1fr;
   }
@@ -47,7 +44,7 @@ const CardsGridImage = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;  
+  grid-gap: 3rem;  
   @media (max-width: 927px) {
     grid-template-columns: 1fr;
   }
@@ -71,7 +68,7 @@ function ProjectsListing() {
         </CardsGrid>
       </Section>
       <Section>
-        <TitleContainer><Title>web</Title><TitleLine></TitleLine></TitleContainer>
+        <TitleContainer><Title>Web</Title><TitleLine></TitleLine></TitleContainer>
         <CardsGridImage>
           {projects.map((project, index) => {
           if (project.type === 'web') {
