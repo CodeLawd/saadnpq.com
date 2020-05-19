@@ -146,7 +146,7 @@ function ProjectCard(props) {
   const { project } = props
   let demo;
   if (project.demo) {
-    demo =  <a href={`https://github.com/${project.repo}`} target='_blank' rel="noopener noreferrer">
+    demo =  <a href={`${project.demo}`} target='_blank' rel="noopener noreferrer">
               <CTAdemo>
                 Demo
               </CTAdemo>
