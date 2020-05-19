@@ -51,7 +51,7 @@ const Avatar = styled.img`
     width: 100px;
   }
   @media (max-width: 370px) {
-    margin-top: 20px;
+    margin-bottom: 20px;
     width: 150px;
   }
 `
