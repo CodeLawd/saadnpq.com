@@ -17,12 +17,13 @@ const Title = styled.div`
   font-family: 'Quicksand';
   color: ${props => props.theme.primaryColor};
   padding-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `
 
 const About = styled.div`
   grid-area: about;
   width: 600px;
+  margin-bottom: 30px;
   @media (max-width: 966px) {
     width: 400px;
   }
@@ -77,10 +78,10 @@ function WhoAmI() {
   return(
     <Section id="about">
       <Center>
-        <Title>who am i</Title>
+        <Title>Who am i</Title>
         <Content>
           <About>
-            i am a developer with multible backgrounds and multipotentiality in computer science. my horizontal knowledge base helps me a lot with many things, some of which are: idea synthesis (crafting a solution from the intersection of many fields), deep understanding of the big picture, and rapid learning.
+            I am a self-taught developer with multible backgrounds and multipotentiality in computer science. My horizontal knowledge base helps me a lot with many things, some of which are: idea synthesis (crafting a solution from the intersection of many fields), deep understanding of the big picture, and rapid learning.
           </About>
           <StyledSkills>
             <Skills />

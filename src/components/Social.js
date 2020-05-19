@@ -28,11 +28,11 @@ function Social(props){
     <Container>
       <Item href="https://github.com/saadnpq" target='_blank'  rel="noopener noreferrer">
         <Icon> <AiOutlineGithub /> </Icon>
-        <div>github</div>
+        <div>Github</div>
       </Item>
       <Item href="https://twitter.com/saadnpq" target='_blank'  rel="noopener noreferrer">
         <Icon> <AiOutlineTwitter /> </Icon>
-        <div>twitter</div>
+        <div>Twitter</div>
       </Item>
     </Container>
   )

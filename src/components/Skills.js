@@ -10,7 +10,6 @@ const Container = styled.div`
 const Title = styled.div`
   font-size: 1.875rem;
   font-family: 'Quicksand';
-  margin-top: 20px;
   margin-bottom: 20px;
   color: ${props => props.theme.primaryColor};
 `
@@ -89,7 +88,7 @@ function Skills() {
   return(
     <Container>
       <Title>
-        technical skills
+        Technical Skills
       </Title>
       <Categories>
         {skills.map((skillObject, index) => {
@@ -124,7 +123,7 @@ function Skills() {
       </Elements>
       <StyledSmall>
         <Small>
-          the bars represent how i feel confident in every skill relative to the other skills 
+          The bars represent how i feel confident in every skill relative to the other skills 
         </Small>
       </StyledSmall>
     </Container>

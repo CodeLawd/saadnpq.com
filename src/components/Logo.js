@@ -16,7 +16,7 @@ const Npq = styled.span`
 function Logo() {
   return (
     <Container>
-      <Saad>saad</Saad>
+      <Saad>Saad</Saad>
       <Npq>npq</Npq>
     </Container>
   )

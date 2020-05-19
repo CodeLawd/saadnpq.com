@@ -81,7 +81,7 @@ const MusicController = (props) => {
   } else {
     return (
       <Width>
-        <SoundOnButton onClick={togglePlaySound}>sound on</SoundOnButton>
+        <SoundOnButton onClick={togglePlaySound}>Sound on</SoundOnButton>
       </Width>
     )
   }

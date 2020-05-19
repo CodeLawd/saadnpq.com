@@ -1,46 +1,46 @@
 const skills = [
   {
-    category: "languages",
+    category: "Languages",
     elements: [ 
       {
-        name: "python",
+        name: "Python",
         percent: 80,
       },
       {
-        name: "javascript",
+        name: "Javascript",
         percent: 90
       },
       {
-        name: "java",
+        name: "Java",
         percent: 70,
       },
       {
-        name: "c",
+        name: "C",
         percent: 60,
       },
       {
-        name: "c++",
+        name: "C++",
         percent: 50,
       },
       {
-        name: "bash",
+        name: "Bash",
         percent: 70,
       },
       {
-        name: "clisp",
+        name: "Clisp",
         percent: 40,
       },
     ]  
   },
   {
-    category: "technologies",
+    category: "Technologies",
     elements: [ 
       {
-        name: "react",
+        name: "React",
         percent: 90,
       },
       {
-        name: "graphQL",
+        name: "GraphQL",
         percent: 60,
       },
       {
@@ -48,36 +48,36 @@ const skills = [
         percent: 70,
       },
       {
-        name: "linux",
+        name: "Linux",
         percent: 90,
       },
       {
-        name: "nodeJS",
+        name: "NodeJS",
         percent: 70,
       },
       {
-        name: "git",
+        name: "Git",
         percent: 90,
       },
     ]  
   },
   {
-    category: "software",
+    category: "Software",
     elements: [ 
       {
-        name: "figma",
+        name: "Figma",
         percent: 80,
       },
       {
-        name: "matlab",
+        name: "Matlab",
         percent: 60,
       },
       {
-        name: "apache",
+        name: "Apache",
         percent: 70,
       },
       {
-        name: "nginx",
+        name: "Nginx",
         percent: 70,
       },
     ]  

@@ -10,7 +10,7 @@ const StyledButton = styled.button`
 `
 function ThemeToggler(props) {
   return (
-    <StyledButton onClick={props.toggleDarkMode}>{props.darkMode ? "light" : "dark"}</StyledButton>
+    <StyledButton onClick={props.toggleDarkMode}>{props.darkMode ? "Light" : "Dark"}</StyledButton>
   )
 }
 

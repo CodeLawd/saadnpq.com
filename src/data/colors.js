@@ -24,6 +24,7 @@ const colors = {
   globalBorderWidth: ['5px', '5px'],
   railColorMain: ['#FCFCFC', '#9F9F9F'],
   railColorMenu: ['#FCFCFC', '#9F9F9F'],
+  projectSectionStroke: ['#3D3D3D', '#3D3D3D']
 
 }
 

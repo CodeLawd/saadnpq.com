@@ -67,23 +67,23 @@ function Intro() {
   return (
     <StyledMain top={window.innerHeight*0.5}>
       <SecondaryText>
-        hello, i am a cairo based
+        Hello! I am a cairo based
       </SecondaryText>
       <MainText>
-        <ReactRotatingText items={['full stack developer', 'ui/ux designer']} emptyPause={200}/>
+        <ReactRotatingText items={['Full Stack Developer', 'UI/UX Designer']} emptyPause={200}/>
       </MainText>
       <SecondaryText>
-        saad is my name, npq is my unique identifier, and this is my website/portfolio
+        Saad is my name, npq is my unique identifier, and this is my website/portfolio
       </SecondaryText>
       <CTA>
         <LinkContainer>
           <PrimaryCTA onClick={scrollTo.bind(null, "projects")} >
-            projects 
+            Projects 
           </PrimaryCTA>
         </LinkContainer>
         <LinkContainer>
           <SecondaryCTA onClick={scrollTo.bind(null, "contact")}>
-            contact 
+            Contact 
           </SecondaryCTA>
         </LinkContainer>
       </CTA>

@@ -1,85 +1,101 @@
 import React from 'react'
-import { FaPython, FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa'
+import { FaFigma, FaPython, FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa'
+
+// Screenshot should be 1500×1000 in pixels
 
 const projects = [
   { 
-    name: "matrixcli",
-    description: "command line matrix chat client",
+    type: "software",
+    name: "Matrixcli",
+    description: "Sophisticated command line matrix chat client for linux that supports multiple accounts configuration and systemd units",
     repo: "saadnpq/matrixcli",
     techonlogies : [ 
       {
         preJSX: <FaPython />,
-        name: "python"
+        name: "Python"
       }, 
     ],
     showCount: true,
   },
   { 
-    name: "npq hugo",
-    description: "hugo theme for personal blogs",
-    repo: "saadnpq/npq-hugo",
-    demo: "https://themes.gohugo.io/theme/npq-hugo/",
-    techonlogies : [ 
-      {
-        preJSX: <FaHtml5 />,
-        name: "html"
-      }, 
-      {
-        preJSX: <FaCss3Alt />,
-        name: "css"
-      }, 
-      {
-        preJSX: <FaJs />,
-        name: "js"
-      }, 
-    ],
-    showCount: true,
-  },
-  { 
-    name: "evolve",
-    description: "simple mathematical representation of the evolution theory",
+    type: "software",
+    name: "Evolve",
+    description: "This is a simple simulation of the evolution theory done on data structures representing the biological dna. The results of this script shows the shift of this data structures towards speciation.",
     repo: "saadnpq/evolve",
     techonlogies : [ 
       {
         preJSX: <FaPython />,
-        name: "python"
+        name: "Python"
       }, 
     ],
     showCount: false,
   },
   { 
-    name: "this.site",
-  description: "this react app",
-    repo: "saadnpq/saadnpq.com",
-    techonlogies : [ 
-      {
-        preJSX: <FaReact />,
-        name: "react"
-      }, 
-    ],
-    showCount: false,
-  },
-  { 
-    name: "compliant franco",
-    description: "the documented Franco writing system.",
-    repo: "saadnpq/compliant-franco",
-    techonlogies : [ 
-      {
-        name: "none"
-      }, 
-    ],
-    showCount: false,
-  },
-  { 
+    type: "software",
     name: "npq layout",
-    description: "the firmware of the npq keyboard layout designed for the atreus keyboard",
+    description: "The firmware of the npq keyboard layout designed for the atreus keyboard",
     repo: "saadnpq/npq-layout",
     techonlogies : [ 
       {
         name: "C"
       }, 
       {
-        name: "qmk"
+        name: "QMK"
+      }, 
+    ],
+    showCount: false,
+  },
+  { 
+    type: "web",
+    name: "npq hugo",
+    description: "npq hugo is a customizable and responsive dark blog template with integrated contact form and code syntax highlighting",
+    // Screenshot should be 1500×1000 in pixels
+    screenshot: "/assets/images/screenshot-npq-hugo.png",
+    repo: "saadnpq/npq-hugo",
+    demo: "https://themes.gohugo.io/theme/npq-hugo/",
+    techonlogies : [ 
+      {
+        preJSX: <FaHtml5 />,
+        name: "HTML"
+      }, 
+      {
+        preJSX: <FaCss3Alt />,
+        name: "CSS"
+      }, 
+      {
+        preJSX: <FaJs />,
+        name: "JS"
+      }, 
+    ],
+    showCount: true,
+  },
+  { 
+    type: "web",
+    name: "this.site",
+    description: "This react app",
+    // Screenshot should be 1500×1000 in pixels
+    screenshot: "/assets/images/screenshot-this-site.png",
+    repo: "saadnpq/saadnpq.com",
+    techonlogies : [ 
+      {
+        preJSX: <FaReact />,
+        name: "React"
+      }, 
+      {
+        preJSX: <FaFigma />,
+        name: "Figma"
+      }, 
+    ],
+    showCount: false,
+  },
+  { 
+    type: "misc",
+    name: "Compliant Franco",
+    description: "The documented Franco writing system.",
+    repo: "saadnpq/compliant-franco",
+    techonlogies : [ 
+      {
+        name: "None"
       }, 
     ],
     showCount: false,

@@ -22,16 +22,16 @@ function Nav(props) {
   return (
     <Container>
       <Item onClick={() => scrollTo('top')}>
-          home
+          Home
       </Item>
       <Item onClick={() => scrollTo('about')}>
-          about
+          About
       </Item>
       <Item onClick={() => scrollTo('projects')}>
-          projects
+          Projects
       </Item>
       <Item onClick={() => scrollTo('contact')}>
-          contact
+          Contact
       </Item>
     </Container>
   )

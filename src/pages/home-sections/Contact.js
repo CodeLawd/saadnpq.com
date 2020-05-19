@@ -57,6 +57,9 @@ const Aside = styled.div`
 const Paragraph = styled.div`
   margin-bottom: 20px;
 `
+const StyledList = styled.ul`
+  list-style-position: inside;
+`
 
 function calcDate() {
       // create Date object for current location
@@ -91,21 +94,25 @@ function Contact() {
   return (
     <Section id="contact">
       <Container>
-        <Title>contact</Title>
+        <Title>Contact</Title>
         <Content>
           <StyledContactForm>
             <ContactForm />
           </StyledContactForm>
           <Aside>
             <Paragraph>
-              my local time in cairo now is: {date} <br/>
+              My local time in cairo now is: {date} <br/>
             </Paragraph>
             <Paragraph>
-              you don't have to fill in the name and/or email fields if you want to send me something anonymously and you don’t expect a response from me <br />
-            </Paragraph>
-            <Paragraph>
-              beside the contact form you can reach me also through <CopyContainer><Copy copy='saadnpq@protonmail.com' >mail</Copy></CopyContainer> or <CopyContainer><Copy copy='+201066926400' >phone</Copy></CopyContainer>
-            </Paragraph>
+              <div>Beside the contact form you can reach me through: </div>
+              <StyledList>
+              <li><CopyContainer><Copy copy='saadnpq@protonmail.com' >mail</Copy></CopyContainer></li>
+              <li><CopyContainer><Copy copy='+201066926400' >phone</Copy></CopyContainer></li>
+              <li>Github issues for a project specific subject</li>
+              <li>or even Twitter DMs</li>
+              </StyledList>
+              <div> whichever way you feel convenient. </div>
+              </Paragraph>
           </Aside>
         </Content>
       </Container>

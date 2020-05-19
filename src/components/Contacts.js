@@ -18,10 +18,10 @@ function Contacts(props) {
   return (
     <Container>
       <Item>
-        <Copy copy='saadnpq@protonmail.com' inverse={props.inverse} >mail</Copy>
+        <Copy copy='saadnpq@protonmail.com' inverse={props.inverse} >Mail</Copy>
       </Item>
       <Item>
-        <Copy copy='+201066926400' inverse={props.inverse} > phone </Copy>
+        <Copy copy='+201066926400' inverse={props.inverse} >Phone</Copy>
       </Item>
     </Container>
   )
