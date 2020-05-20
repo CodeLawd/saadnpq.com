@@ -43,7 +43,7 @@ const Avatar = styled.img`
   width: 211.82px;
   border-radius: 10px; 
   grid-area: avatar;
-  justify-self: end;
+  justify-self: center;
   @media (max-width: 796px) {
     width: 150px;
   }
@@ -53,6 +53,10 @@ const Avatar = styled.img`
   @media (max-width: 370px) {
     margin-bottom: 20px;
     width: 150px;
+    justify-self: end;
+  }
+  @media (min-width: 1280px) {
+    width: 250px;
   }
 `
 

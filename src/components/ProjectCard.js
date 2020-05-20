@@ -61,7 +61,7 @@ const ProjectHeader = styled.div`
 `
 
 const ProjectFooter = styled.div`
-  padding: 10px 0px 15px 0px;
+  padding: 10px 0px 20px 0px;
   background-color: ${props => props.theme.projectsFooterBackgroundColor};
   border-radius: ${props => props.theme.borderRadius};
 `

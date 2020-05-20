@@ -12,11 +12,9 @@ const Section = styled.div`
 const Container = styled.div`
   width: 85%;
   margin: auto;
-  @media (max-width: 827px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 `
 const CopyContainer = styled.span`
   color: ${props => props.theme.primaryColor};
@@ -33,8 +31,9 @@ const Title = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
-  @media (max-width: 827px) {
+  @media (max-width: 939px) {
     flex-direction: column;
     align-items: center;
   }
@@ -42,16 +41,21 @@ const Content = styled.div`
 `
 
 const StyledContactForm = styled.div`
-  margin: 0px 30px 30px 0px;
-  @media (max-width: 827px) {
+  margin: 0px 25px 30px 0px;
+  @media (max-width: 939px) {
     margin: 0px 0px 30px 0px;
   }
 
 `
 
 const Aside = styled.div`
-  width: 85%;
+  flex: 1;
   align-self: center;
+  margin-left: 25px;
+  @media (max-width: 939px) {
+    margin: 0px; 
+  }
+
 `
 
 const Paragraph = styled.div`

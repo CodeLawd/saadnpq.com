@@ -42,19 +42,19 @@ const Label = styled.label`
 `
 
 const Form = styled.form`
-  width: 500px;
+  width: 400px;
   background-color: ${props => props.theme.backgroundColor};
   border-radius: 8px;
   padding: 20px; 
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 827px) {
+  @media (max-width: 939px) {
     background: none;
     padding: 0px; 
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 492px) {
     width: 80vw
   }
 
