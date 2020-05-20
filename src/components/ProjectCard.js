@@ -5,11 +5,22 @@ import GitHubButton from 'react-github-btn'
 import {settingsContext} from '../contexts/SettingsContext'
 
 const Card = styled.div`
+  height: 100%;
+  width: 100%;
   background-color: ${props => props.theme.projectsBackgroundColor};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`
+
+const Screenshot = styled.img`
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -30,7 +41,7 @@ const ProjectTitle = styled.div`
   font-size: 1.5625rem;
   font-family: 'Quicksand';
   color: ${props => props.theme.primaryColor};
-  padding: 20px 0px ;
+  padding: ${props => props.preview ? '10px 0px 20px 0px' : '20px 0px'}; 
 `
 
 const ProjectDescription = styled.div`
@@ -141,6 +152,19 @@ const CTAdemo = styled.div`
   align-items: center;
 `
 
+const HoverIndicatorContainer = styled.div`
+  width: 90%;
+  margin: auto; 
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+const HoverIndicator = styled.div`
+  margin-top: 10px; 
+  font-size: 0.8rem;
+  color: ${props => props.theme.projectsMeta};
+`
+
 function ProjectCard(props) {
   const {darkMode} = useContext(settingsContext)
   const { project } = props
@@ -154,11 +178,24 @@ function ProjectCard(props) {
   }else {
     demo = <div></div>
   }
+
+  let screenshot 
+  let hoverIndicator
+  if (props.preview) {
+    screenshot = <Screenshot src={project.screenshot}/>
+    hoverIndicator = <HoverIndicatorContainer> <HoverIndicator>Hover for screenshot</HoverIndicator> </HoverIndicatorContainer>
+  } else {
+    screenshot = <div></div>
+    hoverIndicator = <div></div>
+  }
+
   return(
     <Card>
+      {screenshot}
+      {hoverIndicator}
       <ProjectHeader>
         <HeaderContainer>
-          <ProjectTitle>
+          <ProjectTitle preview={props.preview}>
             <a href={`https://github.com/${project.repo}`} target='_blank' rel="noopener noreferrer" > { project.name } </a>
           </ProjectTitle>
           <ProjectDescription>{project.description}</ProjectDescription>      
