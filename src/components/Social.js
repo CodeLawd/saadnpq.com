@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaMastodon, FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaMastodon, FaGithub, FaTwitter, FaReddit } from 'react-icons/fa'
 
 const Container = styled.div`
   display: flex;
@@ -30,13 +30,17 @@ function Social(props){
         <Icon> <FaGithub /> </Icon>
         <div>Github</div>
       </Item>
-      <Item rel="me" href="https://mstdn.io/@saadnpq" target='_blank'  rel="noopener noreferrer">
+      <Item href="https://mstdn.io/@saadnpq" target='_blank'  rel="me">
           <Icon> <FaMastodon /> </Icon>
           <div>Mastodon</div>
       </Item>
       <Item href="https://twitter.com/saadnpq" target='_blank'  rel="noopener noreferrer">
         <Icon> <FaTwitter /> </Icon>
         <div>Twitter</div>
+      </Item>
+      <Item href="https://reddit.com/u/saadnpq" target='_blank'  rel="noopener noreferrer">
+          <Icon> <FaReddit /> </Icon>
+          <div>Reddit</div>
       </Item>
     </Container>
   )
